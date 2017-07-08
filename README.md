@@ -65,6 +65,7 @@ Currently, HS256 algorithm is the one in use.
 
 You have to map the warden scopes that will be authenticatable through JWT, with the user repositories from where these scope user records can be fetched. If a string is supplied, the user repository will first be looked up as a constant.
 
+
 For instance:
 
 ```ruby
@@ -165,7 +166,7 @@ module RevocationStrategy
   def self.jwt_revoked?(payload, user)
     # Does something to check whether the JWT token is revoked for given user
   end
-  
+
   def self.revoke_jwt(payload, user)
     # Does something to revoke the JWT token for given user
   end
